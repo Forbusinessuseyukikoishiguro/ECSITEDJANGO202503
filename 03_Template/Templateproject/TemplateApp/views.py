@@ -13,8 +13,11 @@ def home(request):
     favorite_fruit = ['Apple', 'Banana', 'Orange']
     my_info = {'name': 'Yukiko Ishiguro', 'age': 25}
     
+    
+    status = 10
+    
     return render(request, 'TemplateApp/home.html', 
-                 context={'my_name': my_name, 'favorite_fruit': favorite_fruit, 'my_info': my_info})
+                 context={'my_name': my_name, 'favorite_fruit': favorite_fruit, 'my_info': my_info, 'status': status})
 
 
 #sample1関数を作る
@@ -39,6 +42,8 @@ def sample(request):
     I'm Ichiro
     Yamada.""" 
     msg2 = '12134567890'
+    
+   
     return render(request, 'TemplateApp/sample.html', context={
         'name': name,
         'bmi': bmi,

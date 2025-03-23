@@ -1,3 +1,5 @@
+{% load filter %}
+
 {# <h1>Name: {{ my_name }}</h1> #}
 {# <h2>果物: {{ favorite_fruit }}</h2> #}
 {# <h3>Age: {{ my_info.age }}</h3> #}
@@ -31,3 +33,4 @@
     <p>YUKIKOでない</p>
 {% endif %}
 
+<p> {{ status|status_to_string:'ABC' }}</p>
