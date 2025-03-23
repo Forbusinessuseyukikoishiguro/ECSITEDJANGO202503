@@ -14,7 +14,7 @@ def home(request):
     my_info = {'name': 'Yukiko Ishiguro', 'age': 25}
     
     
-    status = 10
+    status = 20
     
     return render(request, 'TemplateApp/home.html', 
                  context={'my_name': my_name, 'favorite_fruit': favorite_fruit, 'my_info': my_info, 'status': status})
