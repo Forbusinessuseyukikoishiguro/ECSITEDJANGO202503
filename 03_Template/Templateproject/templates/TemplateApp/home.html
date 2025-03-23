@@ -1,3 +1,33 @@
-<h1>Name: {{ my_name }}</h1>
-<h2>果物: {{ favorite_fruit }}</h2>
-<h3>Age: {{ my_info.age }}</h3>
+{# <h1>Name: {{ my_name }}</h1> #}
+{# <h2>果物: {{ favorite_fruit }}</h2> #}
+{# <h3>Age: {{ my_info.age }}</h3> #}
+
+{# for #}
+
+<ul>
+    {% for fruit in favorite_fruit %}
+        <li>{{ fruit }}</li>
+    {% endfor %}
+</ul>
+
+{# if #}
+{% if 'momo' in favorite_fruit %}
+    <p>momoあります</p>
+{% elif 'lemon' in favorite_fruit %}
+    <p>lemonあります</p>
+{% else %}
+    <p>ありません</p>
+{% endif %}
+
+
+{% if 'age' in my_info %}
+    <p>ageあります</p>
+    {% if my_info.age > 20 %}
+        <p>成年</p>
+    {% endif %}
+{% endif %}
+
+{% if my_info.name != 'Yukiko Ishiguro！'%}
+    <p>YUKIKOでない</p>
+{% endif %}
+

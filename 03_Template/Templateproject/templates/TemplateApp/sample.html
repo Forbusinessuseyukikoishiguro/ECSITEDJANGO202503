@@ -1,1 +1,15 @@
-<h1>{{ name }}</h1>
+<h1>{{ name|upper}}</h1>
+
+<h1>{{ page_url|urlize}}</h1>
+
+<p>BMI: {{ bmi|floatformat:2 }}</p>
+
+<p>給料: {{ salary|default:"秘密"}}</p>
+
+<P>{{favorite_fruits|random|lower}}</P>
+
+<p>{{ favorite_fruits|join:',' }}</p>
+
+<p>{{ msg|linebreaks}}</p>
+
+<p>{{ msg2|truncatechars:3 }}</p>
