@@ -1,3 +1,7 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href = "{% static 'static_file/css/sample.css'%}" %}">
+
 <h1>{{ name|upper}}</h1>
 
 <h1>{{ page_url|urlize}}</h1>
@@ -16,3 +20,6 @@
 
 
 <a href="{% url 'template_app:home' 'yamada' 'sato' %}">Home</a>
+
+
+<img src = "{% static 'static_file/image/sample.jpg' %}" >
