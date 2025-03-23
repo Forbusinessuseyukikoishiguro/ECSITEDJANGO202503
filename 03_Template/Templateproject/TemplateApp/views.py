@@ -8,10 +8,11 @@ def index( request ):
 
 #home関数を作る
 
-def home(request):
-    my_name = 'Yukiko Ishiguro'
+def home(request, first_name, last_name):
+    my_name = f'{first_name} {last_name}'
+  
     favorite_fruit = ['Apple', 'Banana', 'Orange']
-    my_info = {'name': 'Yukiko Ishiguro', 'age': 25}
+    my_info = {'name': first_name, 'age': 25}
     
     
     status = 20
