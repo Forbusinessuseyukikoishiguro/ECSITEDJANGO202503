@@ -53,3 +53,27 @@ def sample(request):
         'msg': msg,
         'msg2': msg2
     })
+    
+    
+
+# クラスを作る
+class Country:
+    def __init__(self, name, population, capital):
+        self.name = name
+        self.population = population
+        self.capital = capital  # 引数はcapitalですが、attributeはareaになっています。修正しました
+
+
+    def __str__(self):
+        return f'{self.name} {self.population} {self.capital}'
+
+    def capital_and_population(self):
+        return f'capital: {self.capital},population:{self.population}'
+
+
+# sample3関数を作る
+def sample3(request):
+    country = Country('Japan', 126800000, 'Tokyo')
+    return render(request, 'TemplateApp/sample3.html', context={
+        'country': country
+    })
