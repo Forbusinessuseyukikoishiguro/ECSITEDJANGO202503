@@ -28,12 +28,21 @@ from ModelApp.models import Person
 #p.save()
 
 
-#create
-Person.objects.create(
-    first_name = 'Jiro', last_name ='Ito',
-    email='bb@gmail.com',
-    salary=20000,
-    memo='creatememethod実行',
-    website=None
-)    
-    
+# #create
+# Person.objects.create(
+#     first_name = 'Jiro', last_name ='Ito',
+#     email='bb@gmail.com',
+#     salary=20000,
+#     memo='creatememethod実行',
+#     website=None
+# )    
+
+
+#get_or_create(get or create)
+Person.objects.get_or_create(
+    first_name = 'Jiro5', last_name ='Ito',
+    email = 'bbcde@gmail.com',salary = 20000,
+    memo = 'get method実行2',
+    website = None
+)
+
